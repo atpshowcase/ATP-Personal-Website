@@ -9,7 +9,7 @@ const RootLayout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <body>
         {/* <Header /> */}
         <main>{children}</main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );

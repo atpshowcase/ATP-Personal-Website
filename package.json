@@ -9,17 +9,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.7.2",
     "framer-motion": "^11.15.0",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-spinners": "^0.15.0"
+    "react-simple-typewriter": "^5.0.1",
+    "react-spinners": "^0.15.0",
+    "react-tsparticles": "^2.12.2",
+    "react-vertical-timeline-component": "^3.5.3",
+    "timelinejs": "^2.35.6"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/timelinejs": "^0.0.31",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
     "postcss": "^8",
