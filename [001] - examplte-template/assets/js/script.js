@@ -1,5 +1,57 @@
 'use strict';
 
+$(window).on("load", function () {
+  setInterval(function () {
+    $(".avatar-box").css("animation", "flip-avatar 1s ease-in-out"); // Apply flip animation
+
+    // After the animation is done, reset it to be ready for the next flip
+    setTimeout(function () {
+      $(".avatar-box").css("animation", ""); // Reset the animation
+    }, 1000); // Reset after 1 second (same as the animation duration)
+  }, 10000); // Trigger the flip every 10 seconds
+
+  setTimeout(function () {
+    // Open section1 with a smooth "rise" transition
+    $("#section1").addClass("open"); // Add the class to trigger the rise effect
+    
+    $(".section2").fadeIn(2000, function () {
+      // Once section2 is visible, trigger the rise animation for section2
+      $(this).addClass("loaded"); // Add the "loaded" class to trigger the "rise"
+      
+      // Slide up section1 and remove it from the DOM
+      $("#section1").slideUp(1000, function () {
+        $(this).remove(); // Remove section1 after slide-up
+      });
+    });
+
+    // Dynamically load the main style.css and remove preloader.css
+    if (!$('link[href="./assets/css/style.css"]').length) {
+      $("head").append('<link rel="stylesheet" href="./assets/css/style.css" type="text/css">');
+    }
+
+    $("#particles-js").fadeIn(100, function () {
+      particlesJS.load('particles-js', '', function () {
+        console.log('particles.js loaded');
+      });
+
+      // Force a redraw by resizing the canvas after particles are loaded
+      setTimeout(function () {
+        window.dispatchEvent(new Event('resize'));
+      }, 100);
+    });
+    
+    $('link[href="./assets/css/preloader.css"]').remove();
+  }, 1000); // Delay before starting section transition (increased for smoothness)
+
+  // Smoothly load and show particles.js and section3
+  setTimeout(function () {
+
+    $(".section3").fadeIn(2000); // Smooth fade in for section3
+    $(".section3").addClass("loaded"); // Trigger the "rise" animation for section3
+  }, 2500); // Adjust delay to ensure smooth flow
+});
+
+
 
 
 // element toggle function
@@ -157,3 +209,5 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+

@@ -1,0 +1,95 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Main Content */
+#content {
+    padding: 20px;
+    text-align: center;
+    display: none;
+    opacity: 0;
+    transform: translateY(50px); /* Start content off-screen */
+}
+
+/* Hide content initially */
+.hidden {
+    display: none;
+}
+
+/* Typewriter Effect */
+#typewriter-text {
+    display: inline-block;
+    font-size: 2em;
+    font-weight: bold;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 4px solid rgba(0, 0, 0, 0.75);
+    width: 0;
+    animation: typing 3s steps(30) 1s forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Animation for the Rise effect */
+@keyframes rise {
+    0% {
+        opacity: 0;
+        transform: translateY(50px); /* Start from below */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* End at normal position */
+    }
+}
+
+/* Applying rise animation when content is revealed */
+#content.show {
+    animation: rise 1s ease-out forwards;
+}

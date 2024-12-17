@@ -14,21 +14,6 @@
 /*-----------------------------------*\
   #CUSTOM PROPERTY
 \*-----------------------------------*/
-#particles-js {
-  width: 100%;
-  height: 100%;
-  background-color: #000000; /* Add a fallback background color */
-  /* Uncomment the line below if you want a background image */
-  /* background-image: url('your-background-image.jpg'); */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  position: fixed; /* Ensure it stays fixed on the screen */
-  top: 0;
-  left: 0;
-  z-index: -1; /* Send it to the background */
-}
-
 
 :root {
 
@@ -1894,4 +1879,76 @@ textarea.form-input::-webkit-resizer { display: none; }
 
   .timeline-text { max-width: 700px; }
 
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  background-color: #000000; /* Add a fallback background color */
+  /* Uncomment the line below if you want a background image */
+  /* background-image: url('your-background-image.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed; /* Ensure it stays fixed on the screen */
+  top: 0;
+  left: 0;
+  z-index: -1; /* Send it to the background */
+}
+
+/* For section2 and other elements that should rise */
+.section2,
+.section3 {
+  transform: translateY(30px); /* Start below */
+  opacity: 0;
+  transition: transform 1.5s ease-out, opacity 1.5s ease-out;
+}
+
+/* Make them rise into view */
+.section2.loaded,
+.section3.loaded {
+  transform: translateY(0); /* Move to original position */
+  opacity: 1; /* Fully visible */
+}
+
+/* Define the flip animation */
+@keyframes flip-avatar {
+  0% {
+    transform: rotateY(0deg); /* Initial state (no rotation) */
+  }
+  100% {
+    transform: rotateY(360deg); /* Complete flip */
+  }
+}
+
+/* Apply the flip animation to the avatar */
+.avatar-box {
+  display: inline-block;
+  transform-style: preserve-3d; /* Ensure proper 3D effect */
+  perspective: 1000px; /* Give a perspective for the 3D effect */
+  backface-visibility: hidden; /* Hide the backface during the flip */
+  transition: transform 1s ease-in-out; /* Smooth transition for each flip */
+}
+
+
+/* Add this CSS to your existing styles */
+.typewriter {
+  font-family: 'Courier New', Courier, monospace; /* Use a monospace font */
+  overflow: hidden; /* Ensures that text is hidden until revealed */
+  border-right: .15em solid black; /* Add a cursor at the end of the text */
+  white-space: nowrap; /* Prevents the text from wrapping */
+  width: 0; /* Initially no width */
+  animation: typing 4s steps(30) 1s forwards, blink-caret 0.75s step-end infinite; /* Typing animation */
+}
+
+@keyframes typing {
+  100% {
+    width: 100%; /* Expand the width to the full length of the text */
+  }
+}
+
+@keyframes blink-caret {
+  50% {
+    border-color: transparent; /* Makes the cursor disappear */
+  }
 }
