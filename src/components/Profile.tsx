@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import { FaXTwitter } from "react-icons/fa6";
+import { FaMedium, FaXTwitter } from "react-icons/fa6";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 import {
@@ -12,18 +12,23 @@ import { Button } from "@/components/ui/button";
 const socials = [
     {
         name: "Github",
-        link: "https://github.com/achris-alonzo30",
+        link: "https://github.com/annandltp",
         icon: <FaGithub className="size-4" />
     },
     {
         name: "LinkedIn",
-        link: "https://linkedin.com/in/lonzochris",
+        link: "https://id.linkedin.com/in/anandela-titis-panggraito-a3691b16b",
         icon: <FaLinkedin className="size-4" />
     },
     {
         name: "X (Twitter)",
-        link: "https://x.com/lonz_chris",
+        link: "https://x.com/annandl_",
         icon: <FaXTwitter className="size-4" />
+    },
+    {
+        name: "Medium",
+        link: "https://medium.com/@atpshowcase",
+        icon: <FaMedium className="size-4" />
     }
     // TODO: Add more socials here
 ]
@@ -43,14 +48,14 @@ export const Profile = () => {
                             className="rounded-full size-12 md:w-full h-auto object-cover border-2"
                         />
                         <div className="flex flex-col items-start justify-center">
-                            <h1 className="font-bold md:mt-4 text-xl md:text-2xl">Chris Lonzo</h1>
+                            <h1 className="font-bold md:mt-4 text-xl md:text-2xl">Anandela Titis Panggraito</h1>
                             <p className="text-sm md:text-base text-muted-foreground">
-                                Solopreneur Developer
+                                Full Stack Developer
                             </p>
                         </div>
                     </div>
                     <p className="mt-2 text-start text-sm text-muted-foreground">
-                        I am a solopreneur developer with a passion for building products that solve real-world problems.
+                        I am a full stack developer with a passion for building products that solve real-world problems.
                     </p>
                     <Button className="mt-4 w-full" asChild>
                         {/* TODO: Add resume link */}

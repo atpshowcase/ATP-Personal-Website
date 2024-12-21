@@ -72,13 +72,13 @@ export default function Home() {
             <Sidebar data-aos="fade-up" data-aos-delay="1000" />
           </section>
           <main className="md:col-span-2">
-            <section data-aos="fade-up" data-aos-delay="400">
+            <section data-aos="fade-up" data-aos-delay="1000">
               <AboutMe />
             </section>
-            <section data-aos="fade-up" data-aos-delay="600">
+            <section data-aos="fade-up" data-aos-delay="1200">
               <Projects />
             </section>
-            <section data-aos="fade-up" data-aos-delay="800">
+            <section data-aos="fade-up" data-aos-delay="1400">
               <Experience />
             </section>
           </main>

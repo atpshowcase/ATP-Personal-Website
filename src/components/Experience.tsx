@@ -8,41 +8,39 @@ import { JobImages } from "@/components/JobImages";
 
 const jobs = [
     {
-        role: "Senior Full-Stack Developer", // TODO: Replace with actual role
-        company: "Tech Innovators Inc.", // TODO: Replace with actual company name
-        logo: "/company.svg", // TODO: Replace with actual logo
-        duration: "2020 - Present",
+        role: "Full-Stack Developer",
+        company: "Tower Bersama Group.",
+        logo: "/tbg_logo.jpeg",
+        duration: "Oct 2023 - Present",
         description:
-            "Lead developer for multiple high-impact projects, mentoring junior developers, and implementing best practices.",
+            "Responsible for designing and implementing scalable web solutions to support business processes. Led multiple high-impact projects, mentored junior developers, and ensured adherence to industry best practices in code quality and deployment.",
         link: "https://techinnovators.com",
         images: [],
     },
     {
-        role: "Senior Full-Stack Developer", // TODO: Replace with actual role
-        company: "Tech Innovators Inc.", // TODO: Replace with actual company name
-        logo: "/company.svg", // TODO: Replace with actual logo
-        duration: "2018 - 2020",
+        role: "Full-Stack Developer",
+        company: "Business Intelligence Technologies (Bizintek).",
+        logo: "/bizintek_logo.jpeg",
+        duration: "Apr 2023 - Sep 2023",
         description:
-            "Developed and maintained various client projects, focusing on responsive design and performance optimization.",
+            "Collaborated with cross-functional teams to develop responsive web applications tailored to client needs. Focused on performance optimization, clean code practices, and delivering high-quality user experiences.",
         link: "https://websolutions.com",
-        images: [
-            "/devvault.png",
-            "/devvault.png",
-        ],
+        images: [],
+        // images: [
+        //     "/devvault.png",
+        //     "/devvault.png",
+        // ],
     },
     {
-        role: "Senior Full-Stack Developer", // TODO: Replace with actual role
-        company: "Tech Innovators Inc.", // TODO: Replace with actual company name
-        logo: "/company.svg", // TODO: Replace with actual logo
-        duration: "2016 - 2018",
+        role: "Full-Stack Developer",
+        company: "PT Aporisma Solusi Cipta Integrasi.",
+        logo: "/asci_logo.jpeg",
+        duration: "Sep 2020 - Feb 2023",
         description:
-            "Assisted in the development of web applications, gained experience in agile methodologies and version control.",
+            "Contributed to the development of dynamic web applications while enhancing expertise in agile development and version control systems. Gained valuable experience working on diverse projects and improving team collaboration.",
         link: "https://startupventures.com",
-        images: [
-            "/devvault.png",
-            "/devvault.png",
-        ],
-    },
+        images: [],
+    },    
 ]
 
 export const Experience = () => {

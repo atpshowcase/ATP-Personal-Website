@@ -7,28 +7,46 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export const projects = [
     {
-        title: "E-commerce Platform",
-        description: "A full-stack e-commerce solution with React, Node.js, and MongoDB",
+        title: "Discord Clone",
+        description: "A communication platform clone featuring text, voice, and video chat functionalities built with React, Node.js, and MongoDB.",
         tech: "React",
-        link: "#",
+        link: "https://www.youtube.com/watch?v=TfEUSqFk-CM",
     },
     {
-        title: "Task Management App",
-        description: "A productivity app built with React Native and Firebase",
-        tech: "React Native",
-        link: "#",
+        title: "Building E-Commerce and Chat Apps",
+        description: "A fan-made website showcasing One Piece content, featuring interactive design and built with React.",
+        tech: "Flutter",
+        link: "https://www.youtube.com/watch?v=rn3xNIulrWk",
+    },
+    // {
+    //     title: "One Piece Website",
+    //     description: "A fan-made website showcasing One Piece content, featuring interactive design and built with React.",
+    //     tech: "React",
+    //     link: "https://onepiece-eastblue.netlify.app/",
+    // },
+    {
+        title: "Veterinary Clinic Administration Information System Website",
+        description: "A web-based management system designed to streamline operations for veterinary clinics, developed using PHP.",
+        tech: "PHP",
+        link: "https://www.youtube.com/watch?v=3xcx3cp1rJ0",
     },
     {
-        title: "Data Visualization Dashboard",
-        description: "An interactive dashboard using D3.js and Vue.js",
-        tech: "Vue.js",
-        link: "#",
+        title: "Wild Animal Introduction Game",
+        description: "An engaging educational game introducing players to wild animals, developed with Unity.",
+        tech: "Unity",
+        link: "https://www.youtube.com/watch?v=_ED37BTlFFI",
     },
     {
-        title: "AI Chatbot",
-        description: "A machine learning powered chatbot using Python and TensorFlow",
-        tech: "Python",
-        link: "#",
+        title: "Web Based Pizza Delivery",
+        description: "A web application for pizza ordering and delivery management powered by C#.",
+        tech: "C#",
+        link: "https://www.youtube.com/watch?v=8qNCO3yXbH0&feature=youtu.be",
+    },
+    {
+        title: "Crud - Sending Email",
+        description: "A CRUD application featuring email-sending capabilities, built with Golang.",
+        tech: "Golang",
+        link: "https://www.youtube.com/watch?v=8qNCO3yXbH0&feature=youtu.be",
     },
 ]
 
@@ -37,6 +55,11 @@ const techColors = {
     "React Native": "bg-green-500",
     "Vue.js": "bg-purple-500",
     "Python": "bg-yellow-500",
+    "Unity": "bg-pink-500",
+    "PHP": "bg-green-500",
+    "Golang": "bg-red-500",
+    "C#": "bg-purple-500",
+    "Flutter": "bg-orange-500",
 }
 
 export const Projects = () => {
@@ -52,6 +75,7 @@ export const Projects = () => {
                             <div className="flex flex-col h-full">
                                 <Link
                                     href={p.link}
+                                    target="_blank"
                                     className="font-semibold text-primary hover:underline"
                                 >
                                     {p.title}
@@ -73,6 +97,7 @@ export const Projects = () => {
                                     </div>
                                     <Link
                                         href={p.link}
+                                        target="_blank"
                                         className="flex items-center gap-2 text-sm text-primary hover:underline"
                                     >
                                         View Project
