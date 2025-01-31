@@ -1,5 +1,5 @@
 'use client';
-
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { useState, useEffect, useRef } from "react";
 import { ClockLoader } from "react-spinners";
 import { Sidebar } from "@/components/Sidebar";
@@ -8,13 +8,7 @@ import { Projects } from "@/components/Projects";
 import { Experience } from "@/components/Experience";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import dynamic from "next/dynamic";
 
-declare global {
-  interface Window {
-    particlesJS: any;
-  }
-}
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
